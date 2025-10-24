@@ -1,0 +1,593 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', cursive;
+  color: aliceblue;
+  background-color: rgb(240, 244, 255);
+  margin: 0;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  
+  background-attachment: fixed; 
+  color: white;
+  font-family: 'Segoe UI', cursive;
+  line-height: 1.6;
+}
+
+
+
+header {
+  background-color: rgb(31, 38, 46);
+  padding: 20px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  position:sticky;
+
+}
+
+
+.hero {
+  height: 100vh;
+ 
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  padding: 0 20px;
+
+
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  font-family: 'Segoe UI', cursive;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  animation: slideShow 20s infinite;
+}
+
+@keyframes slideShow {
+  0% {
+    background-image: url('hospi1.jpg');
+  }
+  20% {
+    background-image: url('hospi2.jpg');
+  }
+  40% {
+    background-image: url('hospi3.jpg');
+  }
+  60% {
+    background-image: url('hospi4.jpg');
+  }
+  80% {
+    background-image: url('hospi5.jpg');
+  }
+  100% {
+    background-image: url('hospi6.jpg');
+  }
+  120% {
+    background-image: url('hospi7.jpg');
+  }
+
+}
+
+
+
+
+.hero-content {
+  max-width: 700px;
+  z-index: 2;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  font-family: 'Segoe UI', sans-serif;
+  letter-spacing: 1px;
+}
+
+.hero p {
+  font-size: 1.3rem;
+  margin-bottom: 25px;
+  line-height: 1.6;
+  font-family: 'Segoe UI', cursive;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content:center;
+  flex-wrap: wrap;  
+}
+
+.btn {
+  text-decoration: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.primary-btn {
+  background-color: #3a86ff;
+  color: white;
+}
+
+.primary-btn:hover {
+  background-color: #0059ff;
+}
+
+.secondary-btn {
+  border: 2px solid #fff;
+  color: white;
+}
+
+.secondary-btn:hover {
+  background-color: white;
+  color: #3a86ff;
+}
+
+
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: aliceblue;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  background-color: aliceblue;
+  color: rgb(45, 49, 49);
+}
+
+
+.doctor-img {
+  display: block;
+  margin: 30px auto;       
+  width: 60%;              
+  max-width: 600px;       
+  height: auto;            
+  border-radius: 20px;     
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);  
+  transition: transform 0.4s ease;  
+}
+
+.doctor-img:hover {
+  transform: scale(1.05);  
+
+}
+button {
+  background-color: rgb(37, 61, 197);
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: rgb(196, 234, 255);
+  transform: scale(1.05);
+}
+
+section {
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url('hospi.jpg');
+ 
+  border-radius: 20px;
+  padding: 40px;
+  margin: 20px;
+}
+
+
+
+.doctor-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.doctor-card {
+background-color: rgba(241, 241, 244, 0.5);
+  color: black;
+  width: 280px;
+  text-align: center;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.doctor-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin-bottom: 15px;
+}
+
+.doctor-card h3 {
+  color: rgb(45, 49, 49);
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.doctor-card p {
+  font-size: 15px;
+  margin: 4px 0;
+}
+
+.doctor-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
+}
+
+
+.registration-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: 0 auto; 
+  background-color: rgba(241, 241, 244, 0.5);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  color: black;
+  transition: 0.3s;
+}
+
+.registration-form label {
+  margin-top: 15px;
+  font-weight: bold;
+  font-size: 16px;
+  
+}
+
+.registration-form input,
+.registration-form select,
+.registration-form textarea {
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  width: 100%;
+
+}
+
+.registration-form input:focus,
+.registration-form select:focus,
+.registration-form textarea:focus {
+  border-color: rgb(93, 144, 244);
+  outline: none;
+  box-shadow: 0 0 5px rgba(93, 144, 244, 0.5);
+
+}
+
+.registration-form button {
+  margin-top: 20px;
+  background-color: rgb(45, 49, 49);
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 16px;
+}
+
+.registration-form button:hover {
+  background-color: rgb(93, 144, 244);
+  transform: scale(1.03);
+}
+
+
+
+.appointment-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: 0 auto; 
+  background-color: rgba(241, 241, 244, 0.5);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  color: black;
+}
+
+.appointment-form label {
+  margin-top: 15px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.appointment-form input,
+.appointment-form select,
+.appointment-form textarea {
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 8px;
+  border-color: rgb(93, 144, 244);
+  border: 1px solid #ccc;
+  font-size: 15px;
+  width: 100%;
+}
+
+.appointment-form input:focus,
+.appointment-form select:focus,
+.appointment-form textarea:focus {
+  border-color: rgb(93, 144, 244);
+  outline: none;
+  box-shadow: 0 0 5px rgba(93, 144, 244, 0.5);
+}
+
+.appointment-form button {
+  margin-top: 20px;
+  background-color: rgb(45, 49, 49);
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 16px;
+}
+
+.appointment-form button:hover {
+  background-color: rgb(93, 144, 244);
+  transform: scale(1.03);
+}
+
+
+.about-float-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #3a86ff;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.about-float-btn img {
+  width: 28px;
+  height: 28px;
+  filter: brightness(0) invert(1);
+}
+
+.about-float-btn:hover {
+  transform: scale(1.1);
+  background-color: #1a73e8;
+}
+
+.about-popup {
+  position: fixed;
+  bottom: 100px;
+  right: 40px;
+  background-color:rgba(241, 241, 244, 0.5);
+  color: #333;
+  width: 260px;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  display: none;
+  animation: fadeIn 0.4s ease;
+  z-index: 1001;
+}
+
+.about-popup h3 {
+  margin-bottom: 10px;
+  color: rgba(241, 241, 244, 0.5);
+  font-size: 20px;
+}
+
+.about-popup p {
+  font-size: 14px;
+  line-height: 1.4;
+  margin-bottom: 15px;
+}
+
+.about-popup button {
+  background-color:rgba(241, 241, 244, 0.5);
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.about-popup button:hover {
+  background-color: #1a73e8;
+}
+
+
+
+#ContactUs {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.contact-info img {
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.contact-info a {
+  color: rgb(0, 123, 255);
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+#openFormBtn {
+  background-color: rgb(45, 49, 49);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+#openFormBtn:hover {
+  background-color: rgb(61, 147, 222);
+}
+
+
+.popup {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  background-color: rgba(241, 241, 244, 0.5);
+  padding: 25px;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  position: relative;
+}
+
+.popup-content h3 {
+  margin-top: 0;
+  color: rgb(45, 49, 49);
+}
+
+.popup-content label {
+  display: block;
+  text-align: left;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.popup-content input,
+.popup-content textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.popup-content button[type="submit"] {
+  background-color: rgb(45, 49, 49);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+.popup-content button[type="submit"]:hover {
+  background-color: rgb(54, 150, 194);
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 25px;
+  color: #555;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: black;
+}
+
+#backBtn {
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+  background-color: #3a86ff;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  font-size: 24px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+   
+#backBtn:hover {
+  background-color: #1a73e8;
+  transform: scale(1.1);
+}
+      
+
+footer {
+  background-color: rgb(7, 7, 47);
+  padding: 15px;
+  margin-top: 20px;
+  text-align: center;
+  color: white;
+  font-size: 14px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
